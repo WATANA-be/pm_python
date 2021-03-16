@@ -20,3 +20,28 @@ class MyCoach:
         else:
             print('オッケーだ！')
         self.count += 1
+
+class MyCoach2:
+    '''
+    鬼コーチクラス
+    '''
+    count = 0
+    max = 5
+    def teach(self):
+        if self.__class__.count<self.__class__.max:
+            #countがmax未満の時の処理
+            print('もっと強く！')
+        else:
+            #countがmaxに達したら以下を実行
+            print('オッケーだ！！！')
+        self.__class__.count += 1
+
+my1 = MyCoach2()
+for i in range(3):
+    print('スマッシュ')
+    my1.teach()
+
+my2 = MyCoach2()
+for i in range(3):
+    print('ライジング')
+    my2.teach()
